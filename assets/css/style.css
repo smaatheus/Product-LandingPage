@@ -68,24 +68,25 @@ main {
     position: relative;
     overflow: hidden;
 }
-.hero-products {
+.hero-opening {
 
     color:rgb(240, 222, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 3%;
+    padding: 60px 1%;
     text-align: center;
+    max-width: 90vh;
 }
 
-.hero-products h2 {
-    font-size: 3rem;
+.hero-opening h2 {
+    font-size: 4rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, #fff, #667eea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.hero-products p {
+.hero-opening p {
     font-size: 1.3rem;
     color: #b8b8d1;
     margin-bottom: 2.5rem;
@@ -97,7 +98,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 0;
+    padding: 60px 3%;
     min-height: 70vh;
 }
 .hero-fone-img {
@@ -107,6 +108,7 @@ main {
     filter: drop-shadow(0 20px 40px rgba(102, 126, 234, 0.5));
     animation: float 3s ease-in-out infinite;
     margin-bottom: 90px;
+    
 }
 .hero-fone h2 {
     font-size: 1.3rem;
@@ -134,7 +136,7 @@ main {
 .section-title {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 30px;
+    margin-bottom: 110px;
     background: linear-gradient(45deg, #fff, #667eea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -142,6 +144,7 @@ main {
 .features {
     padding: 8rem 5%;
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    text-align: center;
 }
 .feature-grid {
     display: grid;
@@ -155,6 +158,24 @@ main {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    text-align: center;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+}
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+.feature-card p {
+    font-size: 1.2rem;
+    color: #b8b8d1;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
 }
 .icone {
     font-size: 3rem;
@@ -173,37 +194,51 @@ main {
     border: 1px solid rgba(102, 126, 234, 0.3);
     flex-shrink: 0;
 }
-.ficha-tecnica {
+.specs {
     font-size: 1.0rem;
     text-align: center;
+    padding: 11rem 5%;
 }
-.ficha-tecnica h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+.specs-conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+.specs-card {
+    padding: 2.5rem;
+    background:rgba(102, 126, 234, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.specs-card:hover {
+    transform: scale(1.05);
+    background: rgba(102, 126, 234, 0.2);
+}
+.specs-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: #667eea;
 }
-.ficha-tecnica p {
-    font-size: 1.1rem;
+.specs-card p {
+    font-size: 1.2rem;
     color: #b8b8d1;
-    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
 }
 .buy-stage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px;
+    padding: 150px;
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-}
-.buy-stage h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center;
 }
 .buy-stage p {
     font-size: 1.5rem;
     color: #b8b8d1;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
 }
 .preco { 
     font-size: 3rem;
@@ -227,8 +262,32 @@ main {
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 footer {
-    padding: 3rem 5%;
+    padding: 2rem 5%;
     text-align: center;
     background: rgba(0, 0, 0, 0.3);
     color: #b8b8d1;
+}
+
+@media (max-width: 768px) {
+.hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 6rem;
+}
+.hero-opening {
+    font-size: 2.5rem;
+}
+
+.hero-fone {
+    width: 300px;
+    height: 300px;
+}
+
+.hero-fone-img {
+    font-size: 8rem;
+}
+
+nav {
+    display: none;
+}
 }
