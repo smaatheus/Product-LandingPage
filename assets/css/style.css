@@ -268,6 +268,63 @@ footer {
     color: #b8b8d1;
 }
 
+/* ------------------ STYLE ADMIN (estoque ainda não integrado 100%)---------------------*/
+
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tabela principal*/
+#products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Cabeçalho da tabela */
+#products-table thead th {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* Células da tabela */
+#products-table td {
+    padding: 1.5rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 1rem;
+}
+
+#products-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover nas linhas */
+#products-table tr:hover {
+    background: rgba(99, 102, 241, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+}
+
+/* Preço formatado */
+.price-cell {
+    font-weight: 600;
+    color: #10b981;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
 .hero {
     flex-direction: column;
