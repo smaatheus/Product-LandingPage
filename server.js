@@ -19,9 +19,9 @@ app.get('/admin', (req, res) => {
 // rota API produtos (json)
 app.get('/api/produtos', (req, res) => {
     const produtos = [
-        { id: 1, name: 'Headphone Pro', price: 899, stock: 5 },
+        { id: 1, name: 'Headphone Pro', price: 699, stock: 5 },
         { id: 2, name: 'Mouse Gamer', price: 119, stock: 20 },
-        { id: 3, name: 'Monitor 144hz', price: 1199, stock: 8 }
+        { id: 3, name: 'Monitor 144hz', price: 859, stock: 8 }
     ];
     res.json(produtos);
 });
