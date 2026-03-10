@@ -1,33 +1,83 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Aurora Tech</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
   </head>
   <body>
     <header class="header">
-      <a href="#" class="logo">
-        <img src="assets/img/logo.png" alt="AuroraTech" class="logo-img" />
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="Aurora Tech" class="logo-img" />
       </a>
     </header>
-    <main>
-      <section class="login-section">
+
+    <main class="login-page">
+      <section class="login-container">
+        <div class="login-info">
+          <span class="login-badge">Aurora Tech</span>
+          <h1>Acesse sua conta</h1>
+        </div>
+
         <div class="login-card">
-          <h1 class="login-title">Bem-vindo</h1>
-          <p class="login-subtitle">Entre na sua conta Aurora Tech</p>
-          Email: <input id="email" value="admin@aurora.com" /><br /><br />
-          Senha: <input id="senha" type="password" value="123" /><br /><br />
-          <button onclick="fazerLogin()">Entrar</button>
+          <h2 class="login-title">Login</h2>
+          <p class="login-subtitle">Use suas credenciais para continuar</p>
+
+          <form class="login-form" onsubmit="fazerLogin(event)">
+            <div class="input-group">
+              <label for="email">E-mail</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Digite seu e-mail"
+                  value="admin@aurora.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="senha">Senha</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  id="senha"
+                  name="senha"
+                  type="password"
+                  placeholder="Digite sua senha"
+                  value="123"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="login-options">
+              <label class="remember-me">
+                <input type="checkbox" />
+                <span>Lembrar de mim</span>
+              </label>
+
+              <a href="#" class="forgot-password">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit" class="login-button">Entrar</button>
+          </form>
         </div>
       </section>
-      <h2>Ainda em construção...</h2>
     </main>
+
     <footer>
       <p>Aurora Tech. Todos os direitos reservados.</p>
       <p>Desenvolvido por Matheus Santos (Estudante de ADS - PUC Minas)</p>
